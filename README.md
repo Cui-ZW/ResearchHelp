@@ -33,7 +33,7 @@
     - 为了方便环境配置，我写了一个自动配置的脚本，可运行以下命令自动配置
         ```bash
         source .venv/bin/activate
-        pip install furo
+        pip install sphinx-sizzle-theme
         pip install --upgrade myst_parser
         pip install --upgrade sphinx_markdown_tables
         ```
@@ -42,8 +42,12 @@
          make clean
          make html
          ```
-    - 以上启用操作需要在sphinxdoc目录中进行
-    - 
+    - 如果需要部署到github page上，可以运行
+        ```bash
+            bash run.sh
+        ```
+        并在setting中选择/docs为html根目录
+
 
 3. 如果只是查看文档，可直接打开build/html/index.html
 4. sizzle主题使用说明可见[https://sphinx-themes.org/sample-sites/sphinx-sizzle-theme/](https://sphinx-themes.org/sample-sites/sphinx-sizzle-theme/)
