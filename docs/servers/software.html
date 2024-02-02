@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -190,7 +190,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -198,11 +198,10 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>软件安装<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<ol class="arabic simple">
-<li><p>Matlab<br />
-大部分软件都是免费的，但有些软件是商业软件需要配置密钥。这里只介绍 Matlab 的激活。
-为了离线也能正常使用，如果是清华的同学，建议使用清华账户激活，仅对个人用户有效。</p></li>
-</ol>
+<section id="matlab">
+<h2>Matlab<a class="headerlink" href="#matlab" title="Permalink to this heading">#</a></h2>
+<p>大部分软件都是免费的，但有些软件是商业软件需要配置密钥。这里只介绍 Matlab 的激活。
+为了离线也能正常使用，如果是清华的同学，建议使用清华账户激活，仅对个人用户有效。</p>
 <ul class="simple">
 <li><p>前提先连上校园网，运行 matlab, 出现以下情况时，直接点击 Next</p></li>
 </ul>
@@ -212,13 +211,14 @@
 </ul>
 <p><img alt="" src="../_images/0108e4b9-88ad-4c1b-ae40-d45d75be775f.png" /></p>
 <p>另外，在安装 matlab 的时候，请选择网络版安装，不要使用清华邮箱激活安装，否则只能是安装的用户可以打开 matlab, 其他用户不能打开。安装网络版后，再将 licenses 中的 network.lic 文件删除即可，这样就可以让其他用户通过自己清华账户激活并离线使用。网络版安装流程(网络版必须联网才能使用，不方便)，见<a class="reference external" href="http://its.tsinghua.edu.cn/ggrj.jsp?urltype=tree.TreeTempUrl&amp;amp;wbtreeid=1079">清华 matlab 安装手册</a>（仅校园内网访问）。</p>
-<ol class="arabic simple" start="2">
-<li><p>FFTW
-这个在oneAPI中的mkl已经自带，加载oneAPI环境后，只需要在编译的时候添加以下编译选项即可</p></li>
-</ol>
+</section>
+<section id="fftw">
+<h2>FFTW<a class="headerlink" href="#fftw" title="Permalink to this heading">#</a></h2>
+<p>这个在oneAPI中的mkl已经自带，加载oneAPI环境后，只需要在编译的时候添加以下编译选项即可</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">lmkl_intel_lp64</span> <span class="o">-</span><span class="n">lmkl_intel_thread</span> <span class="o">-</span><span class="n">lmkl_core</span> <span class="o">-</span><span class="n">liomp5</span> <span class="o">-</span><span class="n">lmkl_intel_thread</span>
 </pre></div>
 </div>
+</section>
 </section>
 
         </article>
@@ -256,8 +256,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">软件安装</a><ul>
+<li><a class="reference internal" href="#matlab">Matlab</a></li>
+<li><a class="reference internal" href="#fftw">FFTW</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
