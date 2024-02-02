@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ubuntu 安装与配置 &mdash; 科研手册 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=e031e9a9"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="软件安装" href="software.html" />
+    <link rel="prev" title="服务器维护与安装" href="index_serv.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            科研手册
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">目录:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index_serv.html">服务器维护与安装</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ubuntu 安装与配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">配置要求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">个人账号配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">远程图形界面</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">其他</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html">软件安装</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">科研手册</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index_serv.html">服务器维护与安装</a></li>
+      <li class="breadcrumb-item active">Ubuntu 安装与配置</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/servers/install.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="ubuntu">
+<h1>Ubuntu 安装与配置<a class="headerlink" href="#ubuntu" title="Permalink to this heading"></a></h1>
+<section id="id1">
+<h2>安装<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>如果已经安装了合适的 Ubuntu 版本，请忽略</p>
+<ol class="arabic simple">
+<li><p>下载合适的 Ubuntu 系统镜像， 我们选用 Ubuntu 20.04 LTS Desktop，可以从<a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/#iso-download">清华开源镜像网站</a>(https://mirrors.tuna.tsinghua.edu.cn/#iso-download)下载.</p></li>
+<li><p>准备一个空白 U 盘，制作启动盘，这里推荐使用<a class="reference external" href="https://rufus.ie/zh/">rufus</a>(https://rufus.ie/zh/),按照官网傻瓜式一键制作</p></li>
+<li><p>将 U 盘插入工作站，在开机启动页面时，进入 BIOS. 不同主板进入 BIOS 界面的快捷键不同，一般开机页面会有提示。进入 BIOS 后，把 U 盘的启动顺序放到第一位，即可。保存修改，退出。</p></li>
+<li><p>系统将进入 U 盘内的文件，可以进入 Ubuntu 的安装界面</p></li>
+<li><p>根据指引，选择安装 Ubuntu, 在选择语言方面，默认应该是英语，也可以选中文。这个在系统安装完后，可以更改。选择<strong>中文</strong>与<strong>英文</strong>本质上没有差别，就是选择中文的话个人目录下的目录是中文的，另外可能在有些情况会出现乱码。为了省事，可以直接选择英语（英语版本默认的拼音输入法不能用，有时候查一些资料麻烦）。不过在这里介绍选择<strong>简体中文</strong>安装的情况，后续会介绍如何在系统安装完后切换成英文目录</p></li>
+<li><p>进入<strong>更新与其他软件</strong>，选择<strong>最小安装</strong>（工作站用不上影音游戏办公这种累赘的软件，保留基本功能即可），取消<strong>安装 Ubuntu 时下载更新</strong>。</p></li>
+<li><p><strong>安装类型</strong>，如果检测到已经安装了 Ubuntu 系统，会有保留原系统、重装原系统、清除整个磁盘并安装当前版本系统以及其他选项（根据回忆）。因为是新机器，且工作站的系统盘是一块独立的盘，我选择了<strong>清除整个磁盘并安装当前版本系统</strong>。后面应该会让选择系统盘是哪一个，选择好了就进行下一步安装。</p></li>
+<li><p><strong>您在什么地方</strong> ：时区选择<strong>Shanghai</strong>。</p></li>
+<li><p><strong>您是谁</strong>： 设置账户密码，以及计算机名，都用英文，<strong>同时建议密码不要与用户名一致</strong>（这里建立的是 sudo 用户组账户，如果密码设置太简单，容易被黑客攻击，实验室的一些工作站就有血淋淋的教训），默认登录时需要密码。</p></li>
+<li><p>静静等待安装完毕。在安装结束时，屏幕会提示拔出 U 盘后，输入回车键。等待进入桌面。</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2>配置要求<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>进入系统的第一件事情就是连网，换 apt 源。如果在学校里面，就连校园网，最好把 ipv4 与 ipv6 都连上。</p>
+<ol class="arabic simple">
+<li><p><strong>换 apt 源</strong>：系统默认 Ubuntu 的源（在国外），一般比较慢，甚至连不上。这里我们换成 <a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">清华 tuna 源：https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/</a>(选择对应版本的源，然后复制下来)。本教程只讲清华源，其他阿里云什么的请百度，但配置流程一样。<strong>以下操作均要使用 sudo 操作</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>先备份原来的 apt 源，</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">source</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">bak</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>打开源文件，清空文件内容</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
+</pre></div>
+</div>
+<p>清除原来文件中的内容，在命令形式，依次执行 gg(将光标至文件首行)，dG,清空内容。另外一个比较笨的方法，就是 dd(删除行)一行行删除即可。</p>
+<ul class="simple">
+<li><p>执行 i 或者 a(进行插入命令，进入编辑模式)，复制清华源内容即可，ESC 退出编辑模式。执行：wq(保存退出，冒号是必须加的)</p></li>
+<li><p>更新源(<strong>只用 update, 而 upgrade 慎用，有可能导致系统图形界面奔溃</strong>)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>如果工作站是放机房，想回工位通过 ssh 远程登录慢慢安装，请先安装 openssh-server, 并启动。</p></li>
+</ol>
+<ul class="simple">
+<li><p>安装 openssh-server</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">openssh</span><span class="o">-</span><span class="n">server</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>安装完成后，ssh 会自启动，检测是否运行：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">status</span> <span class="n">ssh</span>
+</pre></div>
+</div>
+<p>会输出</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2021-07-04 09:49:37 CST; 1 weeks 6 days ago
+...
+</pre></div>
+</div>
+<p>说明正常运行，并且开机自启动.执行 q 返回命令行。</p>
+<ul class="simple">
+<li><p>Ubuntu 自带一个配置防火墙配置工具，称为 UFW。请确保打开了 SSH 端口：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ufw</span> <span class="n">allow</span> <span class="n">ssh</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>本机的 ip 地址查询,找到 ipv4 地址就可以了</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">a</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>这个时候可以检测一下远程是否可以，windows 用 putty, ubuntu 直接用 ssh. 然后就可以快乐滴回工位慢慢配置。</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>通过 apt 自动安装软件(实验室机器默认安装的软件)，不同软件用空格隔开</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">gcc</span>  <span class="n">g</span><span class="o">++</span>  <span class="n">gfortran</span>  <span class="n">gdb</span>  <span class="n">gcc</span><span class="o">-</span><span class="mi">10</span> <span class="n">g</span><span class="o">++-</span><span class="mi">10</span>  <span class="n">gfortran</span><span class="o">-</span><span class="mi">10</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">lcov</span> <span class="n">cmake</span>  <span class="n">make</span>  <span class="n">git</span>  <span class="n">tldr</span>  <span class="n">htop</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">paraview</span>  <span class="n">python3</span><span class="o">-</span><span class="n">paraview</span>  <span class="n">clang</span>  <span class="n">vim</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>手动安装的软件<br />
+可自行安装软件 Intel PSXE 2020 Update 4, MATLAB 2020b, Tecplot 360ex 2020 等 所有软件安装在/opt 目录下 (<strong>清华湍流实验室的同学，安装包见实验室自建的 nas software 目录</strong>)，</p></li>
+<li><p>用户配置<br />
+建议不要使用 root 用户，ubuntu 自动隐藏 root 用户。设置管理员账户。同时实验室内不同的同学最好使用自己的账户，不同账户使用自己的环境变量。</p></li>
+</ol>
+<ul class="simple">
+<li><p>新建 students 用户组，之后给每个人建立以姓名缩写为用户名和密码的用户</p></li>
+<li><p>建立用户组：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">groupadd</span> <span class="n">students</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>新建用户,&lt;username&gt; 请替换成用户名，比如 abc：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">useradd</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">username</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">m</span> <span class="o">-</span><span class="n">G</span> <span class="n">students</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>修改新用户密码,&lt;username&gt; 请替换成用户名，比如 abc：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">passwd</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>敦促新用户修改密码，防止黑客攻击</strong><br />
+只要黑客登入系统，可以通过一些办法得知管理员的账户，进而通过一些手段拿到管理权限，从而劫持电脑</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>NAS 配置<br />
+仅限湍流实验室可以配置，可以自己参考已有机器的/etc/fstab 文件，其他浏览者请忽略</p></li>
+<li><p>硬盘配置</p></li>
+</ol>
+<ul class="simple">
+<li><p>根据挂载盘的多少，可以在/mnt 下建立 disk1, disk2, …文件夹，修改/etc/fstab 进行自动挂载
+/etc/fstab 添加行：（以挂载/dev/sda1 为例）</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UUID</span><span class="o">=</span><span class="mi">643003</span><span class="n">f8</span><span class="o">-</span><span class="mi">88</span><span class="n">b3</span><span class="o">-</span><span class="mi">48</span><span class="n">d0</span><span class="o">-</span><span class="n">bba7</span><span class="o">-</span><span class="mi">926</span><span class="n">a334276bd</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">disk1</span> <span class="n">auto</span> <span class="n">nosuid</span><span class="p">,</span><span class="n">nodev</span><span class="p">,</span><span class="n">nofail</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="n">gvfs</span><span class="o">-</span><span class="n">show</span> <span class="mi">0</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>查询 UUID 方法：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">blkid</span>
+</pre></div>
+</div>
+<p>可以得到类似输出</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb</span><span class="p">:</span> <span class="n">UUID</span><span class="o">=</span><span class="s2">&quot;e60b32da-b2a0-48a9-9905-e480238975e2&quot;</span> <span class="n">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="n">TYPE</span><span class="o">=</span><span class="s2">&quot;ext4&quot;</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span><span class="p">:</span> <span class="n">UUID</span><span class="o">=</span><span class="s2">&quot;2b47f275-d9c3-4dd3-a64d-d500427f16a7&quot;</span> <span class="n">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="n">TYPE</span><span class="o">=</span><span class="s2">&quot;ext4&quot;</span>
+</pre></div>
+</div>
+<p>注意，建议硬盘的类型为 ext4<br />
+有时候，硬盘的格式不是 ext4。这时 blkid 可能并不能输出 UUID。可以通过</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">fdisk</span> <span class="o">-</span><span class="n">lh</span>
+</pre></div>
+</div>
+<p>查看对应的盘的文件路径，比如/dev/sdc<br />
+如果是新盘，可以直接对其进行格式化</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkfs</span><span class="o">.</span><span class="n">ext4</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdc</span>
+</pre></div>
+</div>
+<p>静静等待格式完成即可，重复 blkid 重新查询<br />
+有时候，无法格式化，原因是已经自动挂载，我们先通过 df 查询，然后卸载</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">lh</span>
+</pre></div>
+</div>
+<p>自动挂载，一般都是/media/路径,卸载</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">umount</span> <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">name</span> <span class="n">of</span> <span class="n">directory</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>挂载</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mount</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>可以通过 df，查看挂载情况</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">lh</span>
+</pre></div>
+</div>
+<p>有时候，有些盘无法挂载，原因是已经自动挂载，我们先通过 df 查询，然后卸载</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">lh</span>
+</pre></div>
+</div>
+<p>自动挂载，一般都是/media/路径,卸载</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">umount</span> <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">name</span> <span class="n">of</span> <span class="n">directory</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>然后重新挂载</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mount</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>添加权限, 777 让所有用户可访问。</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chmod</span> <span class="mi">777</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">disk1</span>
+<span class="n">sudo</span> <span class="n">chmod</span> <span class="mi">777</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">disk2</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>测试
+退出 sudo 账户，登入任意一个 students 账户，检查各项软件是否能正常使用，硬盘是否能正常读写。</p></li>
+</ol>
+<ul class="simple">
+<li><p>检查硬盘读写的方法：<br />
+进入目录 touch test</p></li>
+<li><p>测试硬盘读写</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dd</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span> <span class="n">count</span><span class="o">=</span><span class="mi">128</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">of</span><span class="o">=</span><span class="n">test</span> <span class="n">conv</span><span class="o">=</span><span class="n">fdatasync</span>
+</pre></div>
+</div>
+<p>实测发现，在 ubuntu 系统下，ext4 格式的读写速度要比 ntfs 快两倍到三倍。</p>
+</section>
+<section id="id3">
+<h2>个人账号配置<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<p>大部分情况下，自动安装的软件全局都可使用，这个时候无需配置。但有时候要根据自己的需求配置一些环境，比如是用 intel mpi 还是 openmpi 等等。下面给出一些基本配置要求：</p>
+<ul class="simple">
+<li><p>打开自己的 bashrc 文件</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>在 bashrc 最后添加自己的环境变量<br />
+如果运行的题需要占较大内存，建议解除单进程内存限制(具体是哪一个，我就没试过了，反正都解除)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ulimit</span> <span class="o">-</span><span class="n">c</span> <span class="n">unlimited</span>
+<span class="n">ulimit</span> <span class="o">-</span><span class="n">s</span> <span class="n">unlimited</span>
+<span class="n">ulimit</span> <span class="o">-</span><span class="n">m</span> <span class="n">unlimited</span>
+<span class="n">ulimit</span> <span class="o">-</span><span class="n">d</span> <span class="n">unlimited</span>
+<span class="n">ulimit</span> <span class="o">-</span><span class="n">t</span> <span class="n">unlimited</span>
+<span class="n">ulimit</span> <span class="o">-</span><span class="n">v</span> <span class="n">unlimited</span>
+</pre></div>
+</div>
+<p>如果要使用 Intel PSXE, 包含了 ifort,intel mpi，mkl 等等，自己上官网查</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">intel</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">compilervars</span><span class="o">.</span><span class="n">sh</span> <span class="n">intel64</span>
+</pre></div>
+</div>
+<p>如果要使用 anaconda、matlab、tecplot 等，类似 （具体安装路径根据自己机器安装情况定）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH=/opt/anaconda3/bin:/opt/matlab/r2020b/bin:/opt/tecplot360ex2020r1/bin:$PATH
+</pre></div>
+</div>
+<p>如果要使用 openfoam, 前提安装了 openfoam</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">openfoam8</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>同时不用 openfoam 时又需要使用 intel 的 mpi(注：openfoam 只支持 openmpi，因此 mpirun 会与 intel mpi 的 mpirun 冲突)，定义 openfoam 专用的 mpirun 为 ofmpirun 以后直接用 ofmpirun 代替 mpirun,或者用 mpirun.openmpi</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">ofmpirun</span><span class="o">=</span><span class="s1">&#39;/usr/bin/mpirun&#39;</span>
+</pre></div>
+</div>
+<p>或者</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">ofmpirun</span><span class="o">=</span><span class="s1">&#39;/usr/bin/mpirun.openmpi&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>退出重新登录自己的用户，或者 source</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>如果加载了 openfoam 一般会出现提醒</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>gcc: error: unrecognized command-line option ‘--showme:link’
+</pre></div>
+</div>
+<p>这个可以忽略，原因是加载 openfoam 环境变量的时候，使用的默认的 mpirun。 而默认的 mpirun 又被之前的 intel 的环境变量给覆盖成 intel mpi. 但我们定义了ofmpirun,用ofmpirun 处理 openfoam 的并行问题没有影响。如果想要消除这个提醒，可以将 intel 环境变量加载顺序换到openfoam的后面。</p>
+</section>
+<section id="id4">
+<h2>远程图形界面<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<p>有时候，我们需要用图形界面。比如在安装一些软件，比如 matlab 需要使用图形界面。采用的方案一般有两种，一种是远程桌面，另一个是用 X11 服务。远程桌面配置起来比较麻烦，这里介绍 X11 服务
+在 window 系统下，我们可以使用<a class="reference external" href="https://mobaxterm.mobatek.net/">MobaXterm(https://mobaxterm.mobatek.net/)</a>对远程工作站进行连接。具体操作很简单，傻瓜式操作。</p>
+<ul class="simple">
+<li><p>比如使用 matlab 图形化界面，在 MobaXterm 命令行窗口，直接输入 matlab</p></li>
+</ul>
+<p><img alt="" src="../_images/e7d68c77-d4c6-4496-a008-0d9830807355.png" /></p>
+<ul class="simple">
+<li><p>比如用 firefox 连个网，冲个浪呀，直接输入 firefox, 很爽</p></li>
+</ul>
+<p><img alt="" src="../_images/a47e3ad6-5de9-4112-953d-95de9fa28ced.png" /></p>
+<ul class="simple">
+<li><p>有时，在安装新软件有图形界面时候，因为需要在系统盘写入，要加 sudo，可能会不成功，并且报下列错误</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MoTTY</span> <span class="n">X11</span> <span class="n">proxy</span><span class="p">:</span> <span class="n">Unsupported</span> <span class="n">authorisation</span> <span class="n">protocol</span>
+<span class="n">Unable</span> <span class="n">to</span> <span class="n">init</span> <span class="n">server</span><span class="p">:</span> <span class="n">Broadway</span> <span class="n">display</span> <span class="nb">type</span> <span class="ow">not</span> <span class="n">supported</span><span class="p">:</span> <span class="n">localhost</span><span class="p">:</span><span class="mf">12.0</span>
+<span class="n">Error</span><span class="p">:</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">display</span><span class="p">:</span> <span class="n">localhost</span><span class="p">:</span><span class="mf">12.0</span>
+</pre></div>
+</div>
+<p>解决方案是把自己目录下的.Xauthority 复制到/root/目录下即可</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="o">~/.</span><span class="n">Xauthority</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id5">
+<h1>其他<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p>在配置过程中，需要连接清华网，但清华校园网自疫情后就有个毛病，老是报ip地址异常的错误，解决方案</p></li>
+</ol>
+<ul class="simple">
+<li><p>自动跳转后，把网址中的ac_id=1 改成 ac_id=159 或者163（不同位置的电脑可能不一样，159和163出现的比较多，大家可以留意一下自己成功登录后ac_id是多少，大家可以把一些<strong>其他 ac_id 留言分享一下哈</strong>）</p></li>
+</ul>
+<p><img alt="" src="../_images/6e8117eb-3deb-49e8-8826-ad075754d34b.png" /></p>
+<ul class="simple">
+<li><p>另外一种就是通过<a class="reference external" href="https://usereg.tsinghua.edu.cn/login.php">清华校园网自服务https://usereg.tsinghua.edu.cn/login.php</a>的准入功能-准入代认证。</p></li>
+</ul>
+<p><img alt="" src="../_images/58dbd406-fe46-4c6b-847c-0d03016695c1.png" />
+ipv4/ipv6填要联网电脑的IP地址.ipv4与ipv6均可<br />
+passwd 填写自己的校园网账号的密码<br />
+一定要选<strong>校外！校外！校外！</strong><br />
+登录即可，可以通过准入功能-准入在线查看。成功率还比较高。</p>
+<ol class="arabic simple" start="2">
+<li><p>如果安装的是中文版Ubuntu，那么/home下的目录会是“桌面”“下载”等，在终端下进入这些目录看起来很不爽，那怎样改为英文目录呢，很简单：</p></li>
+</ol>
+<ul class="simple">
+<li><p>打开MobaXterm连接远程电脑，或者在主机屏幕面前打开电脑终端，在终端中输入命令:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">LANG</span><span class="o">=</span><span class="n">en_US</span>
+<span class="n">xdg</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">dirs</span><span class="o">-</span><span class="n">gtk</span><span class="o">-</span><span class="n">update</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>跳出对话框询问是否将目录转化为英文路径,同意并关闭.
+在终端中输入命令:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">LANG</span><span class="o">=</span><span class="n">zh_CN</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>关闭终端,重启.下次进入系统,系统会提示是否把转化好的目录改回中文.选择不再提示,并取消修改.主目录的中文转英文就完成了~ ,具体可参见<a class="reference external" href="https://blog.csdn.net/fei2636/article/details/79202102">https://blog.csdn.net/fei2636/article/details/79202102</a>。</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index_serv.html" class="btn btn-neutral float-left" title="服务器维护与安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="software.html" class="btn btn-neutral float-right" title="软件安装" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Zhiwen Cui.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

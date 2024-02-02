@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'ResearchHelp'
+project = '科研手册'
 copyright = '2024, Zhiwen Cui'
 author = 'Zhiwen Cui'
 release = '0.1'
@@ -32,10 +32,10 @@ myst_enable_extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-language = 'zh_CN'
+# language = 'zh_CN'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sizzle'
+html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
