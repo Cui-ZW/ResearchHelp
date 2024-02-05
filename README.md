@@ -21,9 +21,9 @@
         ```
         deactivate
         ```
-    - 同时，本文档采用sizzle主题
+    - 同时，本文档采用furo主题
         ```
-         pip install sphinx-sizzle-theme
+         pip install furo
         ```
     - 为支持markdown
         ```
@@ -33,7 +33,7 @@
     - 为了方便环境配置，我写了一个自动配置的脚本，可运行以下命令自动配置
         ```bash
         source .venv/bin/activate
-        pip install sphinx-sizzle-theme
+        pip install furo
         pip install --upgrade myst_parser
         pip install --upgrade sphinx_markdown_tables
         ```
@@ -50,4 +50,3 @@
 
 
 3. 如果只是查看文档，可直接打开build/html/index.html
-4. sizzle主题使用说明可见[https://sphinx-themes.org/sample-sites/sphinx-sizzle-theme/](https://sphinx-themes.org/sample-sites/sphinx-sizzle-theme/)

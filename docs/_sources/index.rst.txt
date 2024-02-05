@@ -7,10 +7,11 @@
 ========================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: 目录:
    
-   servers/index_serv.rst
+   servers/ind_serv.rst
+   git/ind_git.rst
 
 .. toctree::
    :maxdepth: 1

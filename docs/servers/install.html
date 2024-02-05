@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en" data-content_root="">
+<html class="no-js" lang="zh-CN" data-content_root="">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="软件安装" href="software.html" /><link rel="prev" title="服务器维护与安装" href="index_serv.html" />
+<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="软件安装" href="software.html" /><link rel="prev" title="服务器维护与安装" href="ind_serv.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
-        <title>Ubuntu 安装与配置 - 科研手册 0.1 documentation</title>
+        <title>Ubuntu 安装与配置 - 科研手册 0.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">科研手册 0.1 documentation</div></a>
+      <a href="../index.html"><div class="brand">科研手册 0.1 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,20 +146,24 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">科研手册 0.1 documentation</span>
+  <span class="sidebar-brand-text">科研手册 0.1 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">目录:</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index_serv.html">服务器维护与安装</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of 服务器维护与安装</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="ind_serv.html">服务器维护与安装</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of 服务器维护与安装</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Ubuntu 安装与配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">其他</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software.html">软件安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiler.html">编译</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../git/ind_git.html">Git</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Git</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git/github.html">GitHub 常见问题</a></li>
 </ul>
 </li>
 </ul>
@@ -197,9 +201,9 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="ubuntu">
-<h1>Ubuntu 安装与配置<a class="headerlink" href="#ubuntu" title="Permalink to this heading">#</a></h1>
+<h1>Ubuntu 安装与配置<a class="headerlink" href="#ubuntu" title="此标题的永久链接">#</a></h1>
 <section id="id1">
-<h2>安装<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>安装<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h2>
 <p>如果已经安装了合适的 Ubuntu 版本，请忽略</p>
 <ol class="arabic simple">
 <li><p>下载合适的 Ubuntu 系统镜像， 我们选用 Ubuntu 20.04 LTS Desktop，可以从<a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/#iso-download">清华开源镜像网站</a>(https://mirrors.tuna.tsinghua.edu.cn/#iso-download)下载.</p></li>
@@ -215,7 +219,7 @@
 </ol>
 </section>
 <section id="id2">
-<h2>配置要求<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>配置要求<a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h2>
 <p>进入系统的第一件事情就是连网，换 apt 源。如果在学校里面，就连校园网，最好把 ipv4 与 ipv6 都连上。</p>
 <ol class="arabic simple">
 <li><p><strong>换 apt 源</strong>：系统默认 Ubuntu 的源（在国外），一般比较慢，甚至连不上。这里我们换成 <a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">清华 tuna 源：https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/</a>(选择对应版本的源，然后复制下来)。本教程只讲清华源，其他阿里云什么的请百度，但配置流程一样。<strong>以下操作均要使用 sudo 操作</strong></p></li>
@@ -401,7 +405,7 @@
 <p>实测发现，在 ubuntu 系统下，ext4 格式的读写速度要比 ntfs 快两倍到三倍。</p>
 </section>
 <section id="id3">
-<h2>个人账号配置<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<h2>个人账号配置<a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h2>
 <p>大部分情况下，自动安装的软件全局都可使用，这个时候无需配置。但有时候要根据自己的需求配置一些环境，比如是用 intel mpi 还是 openmpi 等等。下面给出一些基本配置要求：</p>
 <ul class="simple">
 <li><p>打开自己的 bashrc 文件</p></li>
@@ -454,7 +458,7 @@
 <p>这个可以忽略，原因是加载 openfoam 环境变量的时候，使用的默认的 mpirun。 而默认的 mpirun 又被之前的 intel 的环境变量给覆盖成 intel mpi. 但我们定义了ofmpirun,用ofmpirun 处理 openfoam 的并行问题没有影响。如果想要消除这个提醒，可以将 intel 环境变量加载顺序换到openfoam的后面。</p>
 </section>
 <section id="id4">
-<h2>远程图形界面<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<h2>远程图形界面<a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h2>
 <p>有时候，我们需要用图形界面。比如在安装一些软件，比如 matlab 需要使用图形界面。采用的方案一般有两种，一种是远程桌面，另一个是用 X11 服务。远程桌面配置起来比较麻烦，这里介绍 X11 服务
 在 window 系统下，我们可以使用<a class="reference external" href="https://mobaxterm.mobatek.net/">MobaXterm(https://mobaxterm.mobatek.net/)</a>对远程工作站进行连接。具体操作很简单，傻瓜式操作。</p>
 <ul class="simple">
@@ -478,9 +482,8 @@
 </pre></div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id5">
-<h1>其他<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+<section id="id5">
+<h2>其他<a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h2>
 <ol class="arabic simple">
 <li><p>在配置过程中，需要连接清华网，但清华校园网自疫情后就有个毛病，老是报ip地址异常的错误，解决方案</p></li>
 </ol>
@@ -517,6 +520,7 @@ passwd 填写自己的校园网账号的密码<br />
 <li><p>关闭终端,重启.下次进入系统,系统会提示是否把转化好的目录改回中文.选择不再提示,并取消修改.主目录的中文转英文就完成了~ ,具体可参见<a class="reference external" href="https://blog.csdn.net/fei2636/article/details/79202102">https://blog.csdn.net/fei2636/article/details/79202102</a>。</p></li>
 </ul>
 </section>
+</section>
 
         </article>
       </div>
@@ -532,7 +536,7 @@ passwd 填写自己的校园网账号的密码<br />
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index_serv.html">
+          <a class="prev-page" href="ind_serv.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
@@ -578,9 +582,9 @@ passwd 填写自己的校园网账号的密码<br />
 <li><a class="reference internal" href="#id2">配置要求</a></li>
 <li><a class="reference internal" href="#id3">个人账号配置</a></li>
 <li><a class="reference internal" href="#id4">远程图形界面</a></li>
+<li><a class="reference internal" href="#id5">其他</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5">其他</a></li>
 </ul>
 
           </div>
@@ -590,9 +594,10 @@ passwd 填写自己的校园网账号的密码<br />
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=e031e9a9"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=04b44b89"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/translations.js?v=beaddf03"></script>
     </body>
 </html>
