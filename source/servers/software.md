@@ -74,3 +74,66 @@ sudo make uninstall
 ```
 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lmkl_intel_thread
 ```
+
+## oneAPI Toolkits
+
+intel官网提供的说明,[**点击阅读原文可链接官网**](https://software.intel.com/content/www/cn/zh/develop/tools/oneapi/all-toolkits.html#gs.d3ir8x)
+
+![](imag/b6a96150-52c8-459e-87e0-f7a2c84521e2.png)
+
+我们仅需要oneAPI Base Toolkit中的MKL库，以及oneAPI HPC Toolkit.
+### 下载与安装
+可以选择download, 跟随页面提示，选择下载版本。在这里我们的选择为：
+![](imag/e5f7cb00-df85-4af0-ae75-30aedefdd0fb.png)
+
+在linux服务器上（前提已经连上校园网），可以通过官网提供的下载命令按照步骤安装即可
+- 基础包（主要为了MKL）
+
+```bash
+wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18673/l_BaseKit_p_2022.2.0.262_offline.sh
+
+sudo sh ./l_BaseKit_p_2022.2.0.2
+```
+
+- 高性能计算包(MPI, Fortran)
+
+```
+wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18679/l_HPCKit_p_2022.2.0.191_offline.sh
+
+sudo sh ./l_HPCKit_p_2022.2.0.19
+```
+如果官网有最新版本，请下载最新版本
+
+**注意**
+
+基础包中，我们只需要MKL,其他的看自己的需求选择。在安装过程中选择Accept & configure install, 关闭其他暂时不需要的模块。(使用空格进行选择或者取消选择)。 让其默认安装在路径/opt/intel/oneapi即可
+
+![](imag/46f604ee-7dd4-404b-9156-c17fd1473e63.png)
+
+![](imag/e20214e2-e11a-49e3-ab79-f690b37984c1.png)
+
+### 配置
+- 进入个人的bashrc编辑：
+
+```
+vim ~/.bashrc
+```
+- 添加source
+
+```
+source /opt/intel/oneapi/setvars.sh --force
+```
+加载环境变量，如果mpi不起效果，请额外添加HPC的环境变量
+
+```
+source /opt/intel/oneapi/compiler/202x.x.x/env/vars.sh  ##202x.x.x为对应的版本好，具体请根据具体情况填写
+```
+
+
+最后source bashrc
+
+```
+source ~/.bashrc
+```
+输出下列信息，显示安装成功。然后就可以正常使用mpiifort, ifort 以及mkl.
+![](imag/94a843d0-8860-4fa8-9edc-b4ca3f03a8e8.png)

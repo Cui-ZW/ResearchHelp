@@ -162,7 +162,7 @@
 <li class="toctree-l2"><a class="reference internal" href="compiler.html">编译</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../git/ind_git.html">Git</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Git</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../git/ind_git.html">Git 使用总结</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Git 使用总结</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../git/github.html">GitHub 常见问题</a></li>
 </ul>
 </li>
@@ -272,6 +272,64 @@ sudo<span class="w"> </span>make<span class="w"> </span>install
 </div>
 </section>
 </section>
+<section id="oneapi-toolkits">
+<h2>oneAPI Toolkits<a class="headerlink" href="#oneapi-toolkits" title="此标题的永久链接">#</a></h2>
+<p>intel官网提供的说明,<a class="reference external" href="https://software.intel.com/content/www/cn/zh/develop/tools/oneapi/all-toolkits.html#gs.d3ir8x"><strong>点击阅读原文可链接官网</strong></a></p>
+<p><img alt="" src="../_images/b6a96150-52c8-459e-87e0-f7a2c84521e2.png" /></p>
+<p>我们仅需要oneAPI Base Toolkit中的MKL库，以及oneAPI HPC Toolkit.</p>
+<section id="id7">
+<h3>下载与安装<a class="headerlink" href="#id7" title="此标题的永久链接">#</a></h3>
+<p>可以选择download, 跟随页面提示，选择下载版本。在这里我们的选择为：
+<img alt="" src="../_images/e5f7cb00-df85-4af0-ae75-30aedefdd0fb.png" /></p>
+<p>在linux服务器上（前提已经连上校园网），可以通过官网提供的下载命令按照步骤安装即可</p>
+<ul class="simple">
+<li><p>基础包（主要为了MKL）</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://registrationcenter-download.intel.com/akdlm/irc_nas/18673/l_BaseKit_p_2022.2.0.262_offline.sh
+
+sudo<span class="w"> </span>sh<span class="w"> </span>./l_BaseKit_p_2022.2.0.2
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>高性能计算包(MPI, Fortran)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">registrationcenter</span><span class="o">-</span><span class="n">download</span><span class="o">.</span><span class="n">intel</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">akdlm</span><span class="o">/</span><span class="n">irc_nas</span><span class="o">/</span><span class="mi">18679</span><span class="o">/</span><span class="n">l_HPCKit_p_2022</span><span class="mf">.2.0.191</span><span class="n">_offline</span><span class="o">.</span><span class="n">sh</span>
+
+<span class="n">sudo</span> <span class="n">sh</span> <span class="o">./</span><span class="n">l_HPCKit_p_2022</span><span class="mf">.2.0.19</span>
+</pre></div>
+</div>
+<p>如果官网有最新版本，请下载最新版本</p>
+<p><strong>注意</strong></p>
+<p>基础包中，我们只需要MKL,其他的看自己的需求选择。在安装过程中选择Accept &amp; configure install, 关闭其他暂时不需要的模块。(使用空格进行选择或者取消选择)。 让其默认安装在路径/opt/intel/oneapi即可</p>
+<p><img alt="" src="../_images/46f604ee-7dd4-404b-9156-c17fd1473e63.png" /></p>
+<p><img alt="" src="../_images/e20214e2-e11a-49e3-ab79-f690b37984c1.png" /></p>
+</section>
+<section id="id8">
+<h3>配置<a class="headerlink" href="#id8" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>进入个人的bashrc编辑：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>添加source</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">intel</span><span class="o">/</span><span class="n">oneapi</span><span class="o">/</span><span class="n">setvars</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">force</span>
+</pre></div>
+</div>
+<p>加载环境变量，如果mpi不起效果，请额外添加HPC的环境变量</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">intel</span><span class="o">/</span><span class="n">oneapi</span><span class="o">/</span><span class="n">compiler</span><span class="o">/</span><span class="mi">202</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="o">/</span><span class="n">env</span><span class="o">/</span><span class="nb">vars</span><span class="o">.</span><span class="n">sh</span>  <span class="c1">##202x.x.x为对应的版本好，具体请根据具体情况填写</span>
+</pre></div>
+</div>
+<p>最后source bashrc</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>输出下列信息，显示安装成功。然后就可以正常使用mpiifort, ifort 以及mkl.
+<img alt="" src="../_images/94a843d0-8860-4fa8-9edc-b4ca3f03a8e8.png" /></p>
+</section>
+</section>
 </section>
 
         </article>
@@ -337,6 +395,11 @@ sudo<span class="w"> </span>make<span class="w"> </span>install
 <li><a class="reference internal" href="#id4">卸载</a></li>
 <li><a class="reference internal" href="#id5">配置</a></li>
 <li><a class="reference internal" href="#id6">其他</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#oneapi-toolkits">oneAPI Toolkits</a><ul>
+<li><a class="reference internal" href="#id7">下载与安装</a></li>
+<li><a class="reference internal" href="#id8">配置</a></li>
 </ul>
 </li>
 </ul>
