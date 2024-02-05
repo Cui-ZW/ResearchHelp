@@ -17,6 +17,10 @@
    :maxdepth: 1
    :caption: 其他:  
 
+   other/database.md
+   other/online_doc.md
+
+   acknowledgement.md
 
 索引与表
 ==================
