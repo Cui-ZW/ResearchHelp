@@ -9,7 +9,7 @@
 project = '科研手册'
 copyright = '2024, Zhiwen Cui'
 author = 'Zhiwen Cui'
-release = '0.1'
+# release = '0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

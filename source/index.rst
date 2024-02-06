@@ -12,6 +12,8 @@
    
    servers/ind_serv.rst
    git/ind_git.rst
+   vscode/ind_vscode.rst
+   latex/ind_latex.rst
 
 .. toctree::
    :maxdepth: 1

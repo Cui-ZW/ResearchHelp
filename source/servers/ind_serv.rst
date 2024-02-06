@@ -8,3 +8,5 @@
    install.md
    software.md
    compiler.md
+   linux_skill.md
+   manage.md

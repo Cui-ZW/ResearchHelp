@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="服务器管理" href="manage.html" /><link rel="prev" title="编译" href="compiler.html" />
+<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="Git 使用总结" href="../git/ind_git.html" /><link rel="prev" title="linux 系统常用命令" href="linux_skill.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
-        <title>linux 系统常用命令 - 科研手册 文档</title>
+        <title>服务器管理 - 科研手册 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -160,8 +160,8 @@
 <li class="toctree-l2"><a class="reference internal" href="install.html">Ubuntu 安装与配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software.html">软件安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compiler.html">编译</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">linux 系统常用命令</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manage.html">服务器管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_skill.html">linux 系统常用命令</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">服务器管理</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../git/ind_git.html">Git 使用总结</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Git 使用总结</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -214,153 +214,20 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="linux">
-<h1>linux 系统常用命令<a class="headerlink" href="#linux" title="此标题的永久链接">#</a></h1>
-<section id="id1">
-<h2>系统相关常用指令<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h2>
-<ul class="simple">
-<li><p>cd: 转移目录</p></li>
-<li><p>ls: 查看目录下的文件及子目录</p></li>
-<li><p>mkdir: 创建子目录</p></li>
-<li><p>cp: 复制文件。如果复制目录，需要-r</p></li>
-<li><p>mv：移动文件（目录）/重命名</p></li>
-<li><p>rm：删除文件（不可恢复！）。如果删除目录，需要-r。-f强制删除，小心使用！</p></li>
-<li><p>chmod：修改文件属性</p></li>
-<li><p>ip a ：查询ip地址</p></li>
-<li><p>man: 查看某个命令的帮助文档，主要可用于一些可选参数的查找</p></li>
-<li><p>top：动态查看当前运行进程</p></li>
-<li><p>jobs: 当前终端的所有进程信息</p></li>
-<li><p>fg/bg: 进程转后台/前台运行</p></li>
-<li><p>du：统计某个目录所占磁盘空间</p>
-<ul>
-<li><p>du -h –max-depth=1（du -lh -d 1） 一级子目录各自所占空间大小</p></li>
-</ul>
-</li>
-<li><p>history:查看当前用户的历史命令</p>
-<ul>
-<li><p>!<num>可以再次执行num这一行的命令</p></li>
-</ul>
-</li>
-<li><p>echo：显示变量的值</p></li>
-<li><p>kill ：终止进程（后加进程号<pid>）</p>
-<ul>
-<li><p>-9（或-kill）：强制杀死进程</p></li>
-<li><p>-19（或-stop）：暂停一个进程</p></li>
-<li><p>-18（或-cont）：重新恢复暂停的进程的运行</p></li>
-</ul>
-</li>
-<li><p>ssh：远程访问其他服务器</p>
-<ul>
-<li><p>ssh <username>&#64;<hostname> 然后输密码</p></li>
-</ul>
-</li>
-<li><p>ll: 查看文件/目录的详细信息</p></li>
-<li><p>pwd: 显示当前目录位置</p></li>
-<li><p>ln：创建链接</p>
-<ul>
-<li><p>软连接 ln –s <target name> <link name> 相当于快捷方式，可用于文件/目录</p></li>
-<li><p>硬链接：文件副本</p></li>
-</ul>
-</li>
-<li><p>grep：搜索文件中的内容</p></li>
-<li><p>find: 查找目录下的文件</p></li>
-</ul>
-</section>
+          <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>服务器管理<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h1>
 <section id="id2">
-<h2>快捷指令<a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h2>
+<h2>注意事项<a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h2>
 <ul class="simple">
-<li><p>Ctrl C：终止当前命令</p></li>
-<li><p>Tab：自动补全命令</p></li>
-<li><p>上下键：回溯历史命令</p></li>
-<li><p>鼠标选中：即复制选中内容（和windows不同）</p></li>
-<li><p>右键：即粘贴剪贴板中的内容</p></li>
-</ul>
-</section>
-<section id="id3">
-<h2>文件相关指令<a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h2>
-<ul class="simple">
-<li><p>cat：显示文件，也可用于合并文件</p></li>
-<li><p>more：分页的方式显示文件</p></li>
-<li><p>head：显示文件的头部（前若干行）</p></li>
-<li><p>tail：显示文件的尾部（后若干行）</p>
-<ul>
-<li><p>-f：循环读取（可用于查看程序输出）</p></li>
-</ul>
-</li>
-<li><p>scp：远程复制文件</p>
-<ul>
-<li><p>可以复制到本地(windows需要开启ssh)</p></li>
-</ul>
-</li>
-<li><p>&gt;/&gt;&gt; ：重定向（把输出追加到指定文件里），一般用于程序输出到记录文件</p>
-<ul>
-<li><p>&gt;：从头开始</p></li>
-<li><p>&gt;&gt;：从原有部分继续</p></li>
-</ul>
-</li>
-<li><p>|：管道符（将前面命令的输出作为后面命令的输入）</p></li>
-<li><p>vim编辑器（建议自学一下）</p>
-<ul>
-<li><p>i进入编辑模式</p></li>
-<li><p>:q退出编辑器，:wq保存并退出</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="id4">
-<h2>其他技巧<a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h2>
-<ul>
-<li><p>命令后加&amp;，转到当前终端的后台运行（但是关掉shell题会掉）</p>
-<ul class="simple">
-<li><p>解决上述问题：运行前加nohup 或 setsid（推荐！），这样关掉shell还能继续在后台运行</p></li>
-</ul>
-</li>
-<li><p>环境变量（每个用户是独立的）：</p>
-<ul class="simple">
-<li><p>ubuntu系统为~/.bashrc（带.的文件是隐藏文件）</p></li>
-<li><p>如有更改，改后source ~/.bashrc才生效（有些可能需要重启shell生效）</p></li>
-<li><p>可用alias定义一些别称，简化命令，以openfoam为例</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">alias</span> <span class="n">of8</span><span class="o">=</span><span class="s1">&#39;source /opt/openfoam8/etc/bashrc&#39;</span>
-    <span class="n">alias</span> <span class="n">ofmpirun</span><span class="o">=</span><span class="s1">&#39;/usr/bin/mpirun&#39;</span>
-</pre></div>
-</div>
-</li>
-<li><p>关于用户的使用限制修改：</p>
-<ul class="simple">
-<li><p>stack overflow时： ulimit –s unlimited 取消栈大小的限制,建议直接写在环境变量中，一劳永逸.</p></li>
-<li><p>ulimit -a</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>core<span class="w"> </span>file<span class="w"> </span>size<span class="w">          </span><span class="o">(</span>blocks,<span class="w"> </span>-c<span class="o">)</span><span class="w"> </span><span class="m">0</span>
-<span class="w">    </span>data<span class="w"> </span>seg<span class="w"> </span>size<span class="w">           </span><span class="o">(</span>kbytes,<span class="w"> </span>-d<span class="o">)</span><span class="w"> </span>unlimited
-<span class="w">    </span>scheduling<span class="w"> </span>priority<span class="w">             </span><span class="o">(</span>-e<span class="o">)</span><span class="w"> </span><span class="m">0</span>
-<span class="w">    </span>file<span class="w"> </span>size<span class="w">               </span><span class="o">(</span>blocks,<span class="w"> </span>-f<span class="o">)</span><span class="w"> </span>unlimited
-<span class="w">    </span>pending<span class="w"> </span>signals<span class="w">                 </span><span class="o">(</span>-i<span class="o">)</span><span class="w"> </span><span class="m">7823</span>
-<span class="w">    </span>max<span class="w"> </span>locked<span class="w"> </span>memory<span class="w">       </span><span class="o">(</span>kbytes,<span class="w"> </span>-l<span class="o">)</span><span class="w"> </span><span class="m">64</span>
-<span class="w">    </span>max<span class="w"> </span>memory<span class="w"> </span>size<span class="w">         </span><span class="o">(</span>kbytes,<span class="w"> </span>-m<span class="o">)</span><span class="w"> </span>unlimited
-<span class="w">    </span>open<span class="w"> </span>files<span class="w">                      </span><span class="o">(</span>-n<span class="o">)</span><span class="w"> </span><span class="m">65536</span>
-<span class="w">    </span>pipe<span class="w"> </span>size<span class="w">            </span><span class="o">(</span><span class="m">512</span><span class="w"> </span>bytes,<span class="w"> </span>-p<span class="o">)</span><span class="w"> </span><span class="m">8</span>
-<span class="w">    </span>POSIX<span class="w"> </span>message<span class="w"> </span>queues<span class="w">     </span><span class="o">(</span>bytes,<span class="w"> </span>-q<span class="o">)</span><span class="w"> </span><span class="m">819200</span>
-<span class="w">    </span>real-time<span class="w"> </span>priority<span class="w">              </span><span class="o">(</span>-r<span class="o">)</span><span class="w"> </span><span class="m">0</span>
-<span class="w">    </span>stack<span class="w"> </span>size<span class="w">              </span><span class="o">(</span>kbytes,<span class="w"> </span>-s<span class="o">)</span><span class="w"> </span><span class="m">8192</span>
-<span class="w">    </span>cpu<span class="w"> </span><span class="nb">time</span><span class="w">               </span><span class="o">(</span>seconds,<span class="w"> </span>-t<span class="o">)</span><span class="w"> </span>unlimited
-<span class="w">    </span>max<span class="w"> </span>user<span class="w"> </span>processes<span class="w">              </span><span class="o">(</span>-u<span class="o">)</span><span class="w"> </span><span class="m">7823</span>
-<span class="w">    </span>virtual<span class="w"> </span>memory<span class="w">          </span><span class="o">(</span>kbytes,<span class="w"> </span>-v<span class="o">)</span><span class="w"> </span>unlimited
-<span class="w">    </span>file<span class="w"> </span>locks<span class="w">                      </span><span class="o">(</span>-x<span class="o">)</span><span class="w"> </span>unlimited
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>也可在环境变量中解除以下限制</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">ulimit</span><span class="w"> </span>-c<span class="w"> </span>unlimited
-<span class="nb">ulimit</span><span class="w"> </span>-s<span class="w"> </span>unlimited
-<span class="nb">ulimit</span><span class="w"> </span>-m<span class="w"> </span>unlimited
-<span class="nb">ulimit</span><span class="w"> </span>-d<span class="w"> </span>unlimited
-<span class="nb">ulimit</span><span class="w"> </span>-t<span class="w"> </span>unlimited
-<span class="nb">ulimit</span><span class="w"> </span>-v<span class="w"> </span>unlimited
-</pre></div>
-</div>
-</li>
+<li><p>不要在登录后自己用户名目录下直接让程序写出文件（会输出到系统盘）</p></li>
+<li><p>在mnt下建立目录跑题</p></li>
+<li><p>新账户注意更改密码</p></li>
+<li><p>安装软件统一在opt目录下，安装后通常需要修改环境变量之后才能正常使用</p></li>
+<li><p>不要错杀别人的作业！</p></li>
+<li><p>注意存储空间，如果算题把盘算满了，题会挂</p></li>
+<li><p>注意内存占用，内存满了会直接死机</p></li>
+<li><p>不要随意使用管理员账号，有需求请联系管理员</p></li>
+<li><p>开机后，可能需要挂载硬盘才能使用，如遇到请联系管理员</p></li>
 </ul>
 </section>
 </section>
@@ -370,23 +237,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="manage.html">
+          <a class="next-page" href="../git/ind_git.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">服务器管理</div>
+                <div class="title">Git 使用总结</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="compiler.html">
+          <a class="prev-page" href="linux_skill.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">编译</div>
+                <div class="title">linux 系统常用命令</div>
                 
               </div>
             </a>
@@ -420,11 +287,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">linux 系统常用命令</a><ul>
-<li><a class="reference internal" href="#id1">系统相关常用指令</a></li>
-<li><a class="reference internal" href="#id2">快捷指令</a></li>
-<li><a class="reference internal" href="#id3">文件相关指令</a></li>
-<li><a class="reference internal" href="#id4">其他技巧</a></li>
+<li><a class="reference internal" href="#">服务器管理</a><ul>
+<li><a class="reference internal" href="#id2">注意事项</a></li>
 </ul>
 </li>
 </ul>
