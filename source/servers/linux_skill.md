@@ -100,4 +100,6 @@
     ulimit -t unlimited
     ulimit -v unlimited
     ```
-
+-  tldr 用于查找一些命令的习惯用法
+    - 比如 tldr tar可以查找压缩相关的常用用法
+    - 在线版本[tldr](https://tldr.inbrowser.app/)
