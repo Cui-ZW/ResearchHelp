@@ -14,6 +14,7 @@
    git/ind_git.rst
    vscode/ind_vscode.rst
    latex/ind_latex.rst
+   plot/ind_plot.rst
 
 .. toctree::
    :maxdepth: 1

@@ -1,9 +1,8 @@
 
-Git 使用总结
+绘图与出图
 ===================================
 
 .. toctree::
    :maxdepth: 2
 
-   git.md
-   github.md
+   matlab.md
