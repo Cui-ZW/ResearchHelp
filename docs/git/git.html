@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -176,6 +176,7 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../latex/ind_latex.html">Latex 使用总结</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Latex 使用总结</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../latex/skill.html">范例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../latex/vscode.html">VScode中配置latex</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../plot/ind_plot.html">绘图与出图</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of 绘图与出图</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -216,7 +217,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -224,6 +225,18 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="git">
 <h1>Git 使用快捷操作<a class="headerlink" href="#git" title="此标题的永久链接">#</a></h1>
+<section id="commit">
+<h2>提交commit消失的补救方法<a class="headerlink" href="#commit" title="此标题的永久链接">#</a></h2>
+<p>有时候误操作，在git graph 会缺失commit信息</p>
+<ul class="simple">
+<li><p>解决方法：</p>
+<ol class="arabic simple">
+<li><p>git reflog 查看记录，选择对应commit的hashid</p></li>
+<li><p>git reset –hard xxxxx</p></li>
+</ol>
+</li>
+</ul>
+</section>
 </section>
 
         </article>
@@ -269,8 +282,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Git 使用快捷操作</a><ul>
+<li><a class="reference internal" href="#commit">提交commit消失的补救方法</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
